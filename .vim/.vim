@@ -1,0 +1,1 @@
+/home/takafusa/dotfiles/.vim

@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/local/bin/zsh
 
 DOT_FILES=(.zshrc .zshenv .vimrc .vim .gitignore .gitconfig .bash_profile .zprofile .tmux.conf)
 

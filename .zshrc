@@ -76,7 +76,8 @@ fi
 # for powerline
 export PATH=~/.local/bin:$PATH
 powerline-daemon -q
-. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 export PATH="/home/takafusa/.linuxbrew/bin:$PATH"

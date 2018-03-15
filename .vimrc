@@ -34,9 +34,9 @@ set ruler
 syntax on
 
 set background=dark
-autocmd ColorScheme  highlight LineNr ctermfg=31
-autocmd ColorScheme  highlight Normal ctermbg=none
-autocmd ColorScheme  highlight LineNr ctermbg=none
+autocmd ColorScheme *  highlight LineNr ctermfg=31
+autocmd ColorScheme *  highlight Normal ctermbg=none
+autocmd ColorScheme *  highlight LineNr ctermbg=none
 colorscheme hybrid
 
 set nohlsearch

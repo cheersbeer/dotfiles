@@ -1,6 +1,7 @@
 export EDITOR=vim
 
-export LANG=ja_JP.UTF-8
+# export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 export KCODE=u
 
 autoload -Uz colors
@@ -68,6 +69,7 @@ alias mkdir='mkdir -p'
 alias sudo='sudo '
 alias -g L='| less'
 alias -g G='| grep'
+alias vim='nvim'
 
 if which xsel >/dev/null 2>&1 ; then
  alias -g C='| xsel --input --clipboard'
@@ -80,8 +82,25 @@ powerline-daemon -q
 #. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
-export PATH="/home/takafusa/.linuxbrew/bin:$PATH"
+# export PATH="/home/takafusa/.linuxbrew/bin:$PATH"
 
-export PATH="/home/takafusa/anaconda2/bin:$PATH"
-export PATH="/home/takafusa/.linuxbrew/opt/python/libexec/bin:$PATH"
-export PATH="/home/takafusa/anaconda/bin:$PATH"
+# export PATH="/home/takafusa/anaconda2/bin:$PATH"
+# export PATH="/home/takafusa/.linuxbrew/opt/python/libexec/bin:$PATH"
+# export PATH="/home/takafusa/anaconda/bin:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+# export PATH="/anaconda2/bin:$PATH"
+
+# export PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
+
+# for nodebrew
+NODEBREW_HOME=/usr/local/var/nodebrew/current
+export NODEBREW_HOME
+export NODEBREW_ROOT=/usr/local/var/nodebrew
+
+export PATH=$PATH:$NODEBREW_HOME/bin
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# ターミナル起動した際にtmuxを起動
+[[ -z "$TMUX" && ! -z "$PS1"]] && tmux

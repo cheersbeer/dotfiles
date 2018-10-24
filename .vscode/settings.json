@@ -1,0 +1,9 @@
+{
+    "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+    "editor.renderIndentGuides": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "javascript.format.enable": false,
+    "prettier.eslintIntegration": true,
+    "window.zoomLevel": 1
+}

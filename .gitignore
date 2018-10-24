@@ -1,0 +1,10 @@
+# mac
+.DS_Store
+
+# vim
+.vim/nerwhist
+.vim/dein/repos/
+.vim/dein/.cache/
+
+# tmux-client
+tmux-*.log

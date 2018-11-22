@@ -1,9 +1,10 @@
 {
-    "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
-    "editor.renderIndentGuides": false,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "javascript.format.enable": false,
-    "prettier.eslintIntegration": true,
-    "window.zoomLevel": 1
+  "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+  "editor.renderIndentGuides": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "javascript.format.enable": false,
+  "prettier.eslintIntegration": true,
+  "window.zoomLevel": 1,
+  "python.pythonPath": "/Users/takafusa/.pyenv/versions/3.5.6/bin/python"
 }

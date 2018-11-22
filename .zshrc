@@ -102,5 +102,10 @@ export NODEBREW_ROOT=/usr/local/var/nodebrew
 export PATH=$PATH:$NODEBREW_HOME/bin
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# pyenv init
+eval "$(pyenv init -)"
+
 # ターミナル起動した際にtmuxを起動
-[[ -z "$TMUX" && ! -z "$PS1"]] && tmux
+if [[ ! -n $TMUX ]]; then
+  tmux new-session
+fi

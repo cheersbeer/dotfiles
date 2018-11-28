@@ -54,6 +54,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_nodups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
+setopt EXTENDED_HISTORY
 setopt auto_menu
 setopt extended_glob
 setopt nonomatch
@@ -101,6 +102,8 @@ export NODEBREW_ROOT=/usr/local/var/nodebrew
 
 export PATH=$PATH:$NODEBREW_HOME/bin
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+export PATH="$PATH:/anaconda3/bin"
 
 # pyenv init
 eval "$(pyenv init -)"

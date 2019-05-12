@@ -104,6 +104,11 @@ export PATH=$PATH:$NODEBREW_HOME/bin
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export PATH="$PATH:/anaconda3/bin"
+export PATH="$PATH:/Users/takafusa/.pyenv/versions/anaconda3-5.3.0/bin"
+
+export PATH="$PATH:`pwd`/flutter/bin"
+
+export PATH="$PATH:/Users/takafusa/dotfiles/flutter/bin"
 
 # pyenv init
 eval "$(pyenv init -)"

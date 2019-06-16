@@ -113,6 +113,11 @@ export PATH="$PATH:/Users/takafusa/dotfiles/flutter/bin"
 # pyenv init
 eval "$(pyenv init -)"
 
+# for rbenv
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
+
 # ターミナル起動した際にtmuxを起動
 if [[ ! -n $TMUX ]]; then
   tmux new-session

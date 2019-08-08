@@ -76,47 +76,39 @@ if which xsel >/dev/null 2>&1 ; then
  alias -g C='| xsel --input --clipboard'
 fi
 
+# for brew 
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
+
 # for powerline
-export PATH=~/.local/bin:$PATH
+export PATH="/Users/takafusa/.local/bin:$PATH"
 powerline-daemon -q
-. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+  . /Users/takafusa/.local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+  #/Users/takafusa/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
-# export PATH="/home/takafusa/.linuxbrew/bin:$PATH"
-
-# export PATH="/home/takafusa/anaconda2/bin:$PATH"
-# export PATH="/home/takafusa/.linuxbrew/opt/python/libexec/bin:$PATH"
-# export PATH="/home/takafusa/anaconda/bin:$PATH"
-export PATH="$HOME/.pyenv/shims:$PATH"
+# for icu4c
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-# export PATH="/anaconda2/bin:$PATH"
 
-# export PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
-
-# for nodebrew
-NODEBREW_HOME=/usr/local/var/nodebrew/current
-export NODEBREW_HOME
-export NODEBREW_ROOT=/usr/local/var/nodebrew
-
-export PATH=$PATH:$NODEBREW_HOME/bin
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-export PATH="$PATH:/anaconda3/bin"
-export PATH="$PATH:/Users/takafusa/.pyenv/versions/anaconda3-5.3.0/bin"
-
+# for flutter
 export PATH="$PATH:`pwd`/flutter/bin"
-
 export PATH="$PATH:/Users/takafusa/dotfiles/flutter/bin"
 
-# pyenv init
+# for rvm
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="/usr/local/opt/libxslt/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$HOME/.rvm/bin:$HOME/.rvm/scripts/rvm:$PATH"
+source ~/.rvm/scripts/rvm 
+export PATH="/Users/takafusa/.rvm/gems/ruby-1.8.7-head/bin:$PATH"
+
+# for pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# for rbenv
-[[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
-  eval "$(rbenv init -)"
+# memo
+# /Users/takafusa/.rvm/gems/ruby-1.8.7-head/bin:/Users/takafusa/.rvm/gems/ruby-1.8.7-head/bin:/Users/takafusa/.rvm/gems/ruby-1.8.7-head@global/bin:/Users/takafusa/.rvm/rubies/ruby-1.8.7-head/bin:/Users/takafusa/.rvm/bin:/Users/takafusa/.rvm/scripts/rvm:/usr/local/opt/libpq/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/libxml2/bin:/usr/local/var/pyenv/shims:/usr/local/var/pyenv/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Users/takafusa/.pyenv/bin:/Users/takafusa/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/var/pyenv/shims:/usr/local/var/pyenv/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Users/takafusa/.pyenv/bin:/Users/takafusa/.local/bin:/Users/takafusa/.rvm/gems/ruby-1.8.7-head/bin:/Users/takafusa/.rvm/gems/ruby-1.8.7-head@global/bin:/Users/takafusa/.rvm/rubies/ruby-1.8.7-head/bin:/Users/takafusa/.rvm/bin:/Users/takafusa/.rvm/scripts/rvm:/usr/local/opt/libpq/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/libxml2/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/games:/usr/local/games:/Users/takafusa/.pyenv/shims:/Users/takafusa/bin:/anaconda3/bin:/Users/takafusa/.pyenv/versions/anaconda3-5.3.0/bin://flutter/bin:/Users/takafusa/dotfiles/flutter/bin:/anaconda3/bin:/Users/takafusa/.pyenv/versions/anaconda3-5.3.0/bin:/Users/takafusa/dotfiles/flutter/bin:/Users/takafusa/dotfiles/flutter/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
 # ターミナル起動した際にtmuxを起動
 if [[ ! -n $TMUX ]]; then

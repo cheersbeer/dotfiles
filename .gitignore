@@ -8,3 +8,6 @@
 
 # tmux-client
 tmux-*.log
+
+# terminal theme
+solarized.git

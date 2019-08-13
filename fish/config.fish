@@ -62,11 +62,6 @@ set -x PATH "$PYENV_ROOT/bin:$PATH"
 source (pyenv init - | psub)
 
 # ターミナル起動した際にtmuxを起動
-function ftmux
-    if [ (echo $TMUX) = "" ]
-        set ids (tmux list-sessions)
-            if test $status != 0
-                tmux new-session
-            end
-    end
+if [ (echo $TMUX) = "" ]
+    tmux
 end

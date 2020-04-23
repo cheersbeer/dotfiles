@@ -15,21 +15,24 @@ set -g theme_title_display_user yes
 # PROMPT "%{$fgyellow%}[%n@%m:%C]$%{$reset_color%}"
 # RPROMPT "%1(v|%F{green}%1v%f|)"
 
-alias la 'ls -a'
-alias ll 'ls -l'
+# alias la 'ls -a'
+# alias ll 'ls -l'
 alias rm 'rm -i'
 alias cp 'cp -i'
 alias mv 'mv -i'
 alias mkdir 'mkdir -p'
 alias sudo 'sudo '
 alias vim 'nvim'
+alias ls 'lsd'
+alias cat 'bat'
+alias find 'fd'
 
 if which xsel >/dev/null 2>&1
-    alias C='| xsel --input --clipboard'
+    alias C '| xsel --input --clipboard'
 end
 
 # for brew 
-alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
+# alias brew "PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 
 set -xg LC_ALL en_US.UTF-8 
 set -xg LANG en_US.UTF-8 
@@ -45,7 +48,7 @@ set -x PATH "/usr/local/opt/icu4c/bin:$PATH"
 set -x PATH "/usr/local/opt/icu4c/sbin:$PATH"
 
 # for flutter
-set -x PATH "$PATH:`pwd`/flutter/bin"
+set -x PATH "$PATH:/Users/takafusa/working/flutter/bin"
 set -x PATH "$PATH:/Users/takafusa/dotfiles/flutter/bin"
 
 # for rvm
@@ -60,6 +63,18 @@ set -x PATH "$PATH:/Users/takafusa/dotfiles/flutter/bin"
 set -x PYENV_ROOT /usr/local/var/pyenv
 set -x PATH "$PYENV_ROOT/bin:$PATH"
 source (pyenv init - | psub)
+
+# for rbenv
+# status --is-interactive; and . (rbenv init -|psub)
+# fix_path
+
+# for peco
+function fish_user_key_bindings
+  bind \cr peco_select_history
+end
+
+# for starship
+starship init fish | source
 
 # ターミナル起動した際にtmuxを起動
 if [ (echo $TMUX) = "" ]

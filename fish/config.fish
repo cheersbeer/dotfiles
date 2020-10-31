@@ -76,6 +76,9 @@ end
 # for starship
 starship init fish | source
 
+# for emscripten
+# source ~/working/build_opencv/emsdk/emsdk_env.fish
+
 # ターミナル起動した際にtmuxを起動
 if [ (echo $TMUX) = "" ]
     tmux

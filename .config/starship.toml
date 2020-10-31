@@ -38,11 +38,10 @@ deleted = "🗑"
 
 [hostname]
 ssh_only = false
-prefix = "⟪"
-suffix = "⟫"
 trim_at = ".companyname.com"
 disabled = false
 style = "#6c71c4"
+format = "⟪[$hostname]($style)⟫ in "
 
 [kubernetes]
 symbol = "⛵ "

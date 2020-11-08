@@ -91,8 +91,9 @@ cask "zoomus"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Kindle", id: 405399194
-mas "Rocket.Chat", id: 1086818840
+mas "LINE", id: 539883307
 mas "Slack", id: 803453959
+mas "Spark", id: 1176895641
+mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
 mas "Xcode", id: 497799835
-mas "夜フクロウ", id: 428834068
